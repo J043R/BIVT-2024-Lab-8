@@ -86,7 +86,7 @@ namespace Lab_8
             {
                 sb.AppendLine($"{item.Item1} - {item.Item2:F4}");
             }
-            return sb.ToString();
+            return sb.ToString().Trim();
         }
     }
 }
