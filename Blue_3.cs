@@ -9,7 +9,16 @@ namespace Lab_8
     public class Blue_3 : Blue
     {
         private (char, double)[] _output;
-        public (char, double)[] Output => _output;
+        public (char, double)[] Output
+        {
+            get
+            {
+                if (_output == null) return null;
+                var copy = new (char, double)[_output.Length];
+                Array.Copy(_output, copy, _output.Length);
+                return copy;
+            }
+        }
 
         public Blue_3(string input) : base(input)
         {
